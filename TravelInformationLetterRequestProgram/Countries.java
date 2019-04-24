@@ -5,16 +5,10 @@ public class Countries {
 	private String country;
 	private double lat;
 	private double lng;
-	Countries(String country){
+	Countries(String country) throws IOException{
 		this.country = country;
 		FileReader countries = null;
-		try {
-			countries = new FileReader("countries.csv");
-		} catch (FileNotFoundException e) {
-			System.out.println("Error: No countries.csv file");
-			e.printStackTrace();
-			System.exit(0);
-		}
+		countries = new FileReader("countries.csv");
 		Scanner sc = new Scanner(countries);
 		StringTokenizer st;
 		String[] countries_name = new String[300], latitude = new String[300], longitude = new String[300];

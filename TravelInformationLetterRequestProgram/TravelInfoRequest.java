@@ -6,16 +6,9 @@ public class TravelInfoRequest {
 		FileReader templatefile = null;
 		FileReader properties = null;
 		FileWriter outputfile = null;
-		try {
-			templatefile = new FileReader("template_file.txt");
-			properties = new FileReader("properties.txt");
-			outputfile = new FileWriter("output_file.txt");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Error");
-			e.printStackTrace();
-			System.exit(0);
-		}
+		templatefile = new FileReader("template_file.txt");
+		properties = new FileReader("properties.txt");
+		outputfile = new FileWriter("output_file.txt");
 		
 		Scanner sc;
 		sc = new Scanner(properties);

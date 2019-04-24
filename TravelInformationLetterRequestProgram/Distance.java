@@ -11,7 +11,7 @@ public class Distance {
 	public String writeDistance() {
 		return "Country : "+this.name+"\r\n"
 				+ "latitude = "+this.lat+"\r\n"
-				+ "longtitude = "+this.lng+"\r\n--------------------";
+				+ "longitude = "+this.lng+"\r\n--------------------";
 	}
 	public static String getDistance(Distance a, Distance b) {
 		double dist = Math.hypot((a.lng-b.lng), (a.lat-b.lat));
